@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
-  let [counter, setCounter] = useState(1);
+  let [counter, setCounter] = useState(0);
 
   let addOneItem = () => {
     if (counter < 20) {
@@ -13,7 +13,7 @@ export default function Home() {
     }
   };
   let removeOneItem = () => {
-    if (counter > 0 && counter < 21) {
+    if (counter > 0) {
       setCounter(counter - 1);
     } else {
       counter = 0;
